@@ -1,0 +1,393 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ENCABEZADO */
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  padding-top: 130px;
+}
+
+header {
+  height: 18%;
+  width:100%;
+  background: rgb(1, 206, 209);  
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  flex-basis: 10%;
+  padding: 0 10px;
+}
+
+.nombreConsultora{
+  font-size: 1rem;
+  color: rgba(250, 102, 49, 0.747);
+  text-align: start;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 70%;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  line-height: 40px;
+}
+
+nav ul li{
+  width: 120px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align:center;
+  align-content: center;
+  list-style: none;
+  border-radius: 3px;
+}
+
+ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor:pointer;
+  padding: 8px 10px;
+  border-radius: 3px;
+}
+
+ul li a:hover, 
+a:active{
+  color:whitesmoke;
+  background-color: rgb(253, 137, 95);
+  transition: 1s;
+}
+
+/* MAIN */
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  grid-area: main;
+}
+
+/* MAIN INDEX */
+
+.bienvenida {
+  word-spacing:30px;
+  line-height: 50px;
+  font-family:'Rubik Glitch', cursiva; 
+  text-align: center;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+}
+
+/* PIE DE PAGINA */
+
+footer {
+  background-color: rgb(1, 206, 209);  
+  width: 100%;
+  text-align: center;
+  font-size: 0.9375rem;
+  color:rgb(0, 0, 0);
+  padding: 5px;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.iconos {
+  width:3%;
+  border-color: rgb(247, 245, 245);
+  border: 1px solid whitesmoke;
+}
+
+/* MENU: NOSOTROS */
+
+.menuNosotros{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "nosotrosUno nosotrosDos nosotrosTres";
+  grid-column-gap: 5px;
+}
+
+.nosotrosUno{
+  grid-area: nosotrosUno;
+}
+
+.nosotrosDos{
+  grid-area: nosotrosDos;
+}
+
+.noosotrosTres{
+  grid-area: nosotrosTres;
+}
+
+.nosotros {
+  background-color: rgb(241, 156, 125);
+  padding: 20px;
+  border-radius: 15px;
+  margin-left: 1%;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content:space-between;
+  justify-content: space-between;
+}
+
+.nosotrosImagen {
+  width: 100%;
+  height: 50%;
+}
+
+.nosotrosTitulo {
+  color: rgb(29, 11, 143);
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nosotrosParrafo {
+  text-align: justify;
+  color:black;
+}
+
+/* MENU SERVICIOS */
+
+#servicios {
+  font-size: 1.25rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "servicioUno servicioDos servicioTres"
+  "servicioCuatro servicioCinco none";
+  grid-column-gap: 5px;
+} 
+
+.servicioUno{
+  grid-area: servicioUno;
+}
+
+.servicioDos{
+  grid-area: servicioDos;
+}
+
+.servicioTres{
+  grid-area: servicioTres;
+}
+
+.servicioCuatro{
+  grid-area: servicioCuatro;
+}
+
+.servicioCinco{
+  grid-area: servicioCinco;
+}
+
+.serviciosTitulo {
+  color: darkmagenta;
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.serviciosParrafo {
+  background-color: rgb(245, 167, 139);
+  border-radius: 10%;
+  padding: 15px;
+}
+
+/* MENU BÚSQUEDAS */
+
+main h4{
+  font-size: 1.5rem;
+}
+
+.menuBusquedas {
+  font-size: 1.25rem;
+  font-weight:500;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+ }
+
+ mian section div{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content:space-between;
+ }
+
+.busquedasRecuadro {
+  background-color: rgb(241, 156, 125);
+  border-radius: 15px;
+  color:black;
+  line-height: 1.7em;
+  margin: 20px 10px 30px 15px;
+  flex-basis: 180px;
+}
+
+.button {
+  background-color:rgba(255, 127, 80, 0.425);
+  border-radius: 10%;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 2px solid blueviolet;
+  cursor: pointer;
+ }
+
+.button:hover {
+  background-color: rgba(223, 207, 207, 0.61);
+}
+
+/* MENU CONTACTO */
+
+.contacto {
+  font-size: 1.25rem;
+  line-height: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-areas: 
+  "encabezado encabezado"
+  "formulario video";
+  grid-column-gap: 100px;
+}
+
+.encabezadoContacto {
+  font-family: 'Rubik Glitch', cursiva;
+  font-weight: 600;
+  text-align: center; 
+  grid-area: encabezado;
+}
+
+section form {
+  color:rgb(117, 14, 14);
+  grid-area: formulario;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.itemForm {
+  margin: 15px;
+}
+
+.inputContacto {
+  padding: 1% 5% 1% 4%
+}
+
+.casillasForm {
+  margin: 15px;
+}
+
+.textAreaForm {
+  height: 100px;
+  width: 100%;
+}
+
+.botonesForm {
+  background-color: rebeccapurple;
+  padding: 5px;
+  border-radius: 10px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.botonesForm:hover {
+  background-color: rgba(226, 85, 49, 0.61);
+  transform: translate(20px);
+}
+
+.videoContacto {
+  grid-area: video;
+}
+
+@media screen and (max-ridht: 1400px) {
+
+}   
+
+@media screen and (max-ridht: 1200px) { 
+
+}
+
+@media screen and (max-ridht: 1024px) {
+     
+}
+
+@media screen and (max-ridht: 768px) {
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  menu ul{
+    display: flex;
+  }
+
+  menu li{
+    padding: 5rem;
+  }
+
+}
+
+@media screen and (max-ridht: 600px) {
+  
+}
+
+@media screen and (max-ridht: 480px) {
+   
+}
+
+@media screen and (max-ridht: 320px) {
+    
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <enlace rel="preconectar" href="https://fonts.googleapis.com">
+    <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+    <enlace href="https: //fonts.googleapis.com/css2? family= Rubik+Glitch & family= Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700; 1,900 & mostrar=intercambiar" rel="hoja de estilo">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>MI KAPITAL - CONSULTORA</title>
+  </head>
+
+  <body>
+    <header>
+      <span class="logo">
+        <a href="../index.html"><img src="../assets/images/logoSinFondo.png" alt="logo"></a>
+      </span>
+      <span class="nombreConsultora">
+        <h1>Mi Kapital</h1>
+        <h2>Consultora de Recursos Humanos</h2>
+      </span>
+      
+      <nav> 
+        <ul>
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="../pages/nosotros.html">NOSOTROS</a></li>
+          <li><a href="../pages/servicios.html">SERVICIOS</a></li>
+          <li><a href="../pages/busquedas.html">BÚSQUEDAS</a></li>
+          <li><a href="../pages/contacto.html">CONTACTO</a></li>    
+        </ul>       
+      </nav>
+    </header>
+
+    <main class="contacto">
+      <!-- <span class="contacto"> -->
+        <section class="encabezadoContacto">
+          <h3>CONTÁCTENOS</h3> 
+          <p> Si estás interesado en conocer más sobre nuestros servicios o queres que nos comuniquemos con vos, envíanos tu consulta completando el siguiente formulario, serás contactado a la brevedad por uno de nuestros asesores para un asesoramiento personalizado .</p>
+          <p>¡Muchas gracias por visitar nuestro sitio!</p>  
+        </section>
+        <section>      
+          <form action="" method="post" enctype="text/plain">
+
+            <!-- Datos Personales -->
+            <fieldset>
+              <legend>DATOS PERSONALES</legend>
+              <div>
+                <label class="itemForm" for="Nombre">Ingrese su nombre</label>
+                <input  class="inputContacto" type="text" id="Nombre" placeholder="Nombre y apellido" required>
+              </div>
+              <div>
+                <label class="itemForm" for="Email">Ingrese su correo</label>
+                <input class="inputContacto" type="email" id="Email" placeholder="nombre@ejemplo.com" required>
+              </div>
+              <div>
+                <label class="itemForm"  for="Telefono">Ingrese su numero telefónico</label>
+                <input class="inputContacto" type="telefono" id="Telefono" placeholder="Sin el 0 y sin el 15">
+              </div>
+            </fieldset>
+    
+            <!-- Botones de radio -->
+            <fieldset>
+              <label class="casillasForm" for="empresa">
+                <input type="radio" value="empresa" name="empresa-personafisica-otro" checked>Empresa</label>
+              <br>
+              <label class="casillasForm" for="persona fisica">
+                <input type="radio" value="personafisica" name="empresa-personafisica-otro">Persona fisica
+              </label>
+              <br>
+              <label class="casillasForm" for="otro">
+                <input type="radio" value="otro" name="empresa-personafisica-otro">Otro/a
+              </label>
+          </fieldset>
+
+            <textarea class="textAreaForm" cols='50' rows='15' wrap="hard" placeholder='Mensaje' required></textarea><br>
+
+            <!-- Casilla de verificación -->
+            <label class="casillasForm" for="si">
+              <input id="si" type="checkbox" value="si" name="si-no" checked>Quiero recibir el Newletter</label>
+            <br>
+          
+            <!-- Boton enviar -->
+            <input class="botonesForm"  type="submit" value="Enviar">
+            <input class="botonesForm" type="reset" value="Resetear">
+           
+          </form>
+        </section>
+        <iframe class="videoContacto"
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/YxgKyjy5qeE" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      <!-- </span> -->
+    </main>
+  
+    <footer>
+      <div>
+        <h4>NUESTRAS REDES SOCIALES</h4>
+        <a href="#" target="_blank" real="noopener noreferrer"><img class="iconos" src="../assets/icons/facebook.png" alt="Logo de Facebook"></a>
+        <a href="#" target="_blank" real="noopener noreferrer"><img class="iconos" src="../assets/icons/instagram.png" alt="Logo de Instagram"></a>
+        <a href="#" target="_blank" real="noopener noreferrer"><img class="iconos" src="../assets/Icons/linkedin.png" alt="Logo de LinkedIn"></a>
+        <a href="#" target="_blank" real="noopener noreferrer"><img class="iconos" src="../assets/icons/twitter.png" alt="Logo de Twitter"></a>
+        <a href="#" target="_blank" real="noopener noreferrer"><img class="iconos" src="../assets/icons/whatsapp.png" alt="Logo de Whatsapp"></a>
+
+        <p><small> 2022 - Todos los derechos reservados. Mi Kapital Consultora de Recursos Humanos.</small></p>
+      </div>    
+    </footer>
+  </body>
+</html>
