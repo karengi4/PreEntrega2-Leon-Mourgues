@@ -393,7 +393,6 @@ section form {
   .nosotros {
     padding: 10px;
     border-radius: 10px;
-    margin-left: %;
     flex-direction: row;
     flex-wrap: wrap;
     align-content:center;
@@ -487,16 +486,20 @@ section form {
     "logo"
     "nombreConsultora"
     "menu";
-  }
-  
-  .logo {
-    grid-area:logo;
-    width: 40px;
-    height: 40px; 
     justify-self:center;
-    align-self: center;
   }
   
+  header span{
+    width:100%; 
+    grid-area:logo;
+  }
+  
+  .logo a img{
+    width:40px;
+    margin-top: 30px;
+    margin-left: 180px;
+  }
+
   .nombreConsultora{
     grid-area: nombreConsultora;
     font-size:0.5rem;
@@ -533,18 +536,41 @@ section form {
     grid-template-rows: 1fr 1fr 1fr 1fr;
    }
 
-   .contacto {
+   /* .contacto {
     font-size: 1rem;
     padding-top: 100px;
     grid-row-gap: 1px;
     flex-wrap: wrap;
-  }
+    justify-self: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  } */
+
+  /* .contacto {
+    font-size: 1.25rem;
+    line-height: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "encabezado"
+    "formulario"
+    "video";
+    grid-row-gap: 10px;
+  } */
 }
 
 @media screen and (max-width: 320px) {
 
+  .logo a img{
+    width:40px;
+    margin-top: 30px;
+    margin-left: 130px;
+  }
+
   .menuNosotros{
-    font-size: ;
+    font-size:0.2rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
@@ -574,7 +600,6 @@ section form {
     font-size: 1rem;
     padding-top: 100px;
     grid-row-gap: 1px;
-    flex-wrap: wrap;
   }
 }
 
