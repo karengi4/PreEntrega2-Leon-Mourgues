@@ -166,8 +166,6 @@ footer {
   font-size: 1.25rem;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-content:space-between;
   justify-content: space-between;
 }
 
@@ -309,6 +307,11 @@ section form {
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
+  padding: 20px;
+  box-shadow:
+       inset 0 -3em 3em rgba(243, 88, 49, 0.753),
+             0 0  0 2px rgba(167, 19, 180, 0.527),
+             0.3em 0.3em 1em rgba(229, 123, 233, 0.952);
 }
 
 .itemForm {
@@ -345,46 +348,234 @@ section form {
   grid-area: video;
 }
 
-@media screen and (max-ridht: 1400px) {
+@media screen and (max-width: 1400px) {
 
 }   
 
-@media screen and (max-ridht: 1200px) { 
+@media screen and (max-width: 1200px) { 
 
 }
 
-@media screen and (max-ridht: 1024px) {
-     
-}
+@media screen and (max-width: 1024px) {
 
-@media screen and (max-ridht: 768px) {
-  header{
-    display: flex;
-    flex-direction: column;
+  .logo {
+    margin:0;
+    padding: 0;
+  }
+  
+  .nombreConsultora{
+    font-size: 0.5rem;
+    color: rgba(250, 102, 49, 0.747);
+    text-align:start;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:0;
+    padding: 0;
+  }
+  
+  nav ul {
+    flex-basis: 10%;
+    justify-content:space-evenly;
     align-items: center;
-    text-align: center;
+    color: white;
+    font-size: 0.1rem;
+  }
+  
+  .menuNosotros{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nosotrosUno"
+    "nosotrosDos"
+    "nosotrosTres";
+    grid-row-gap: 5px;
   }
 
-  menu ul{
-    display: flex;
+  .nosotros {
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: %;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content:center;
   }
-
-  menu li{
-    padding: 5rem;
-  }
-
 }
 
-@media screen and (max-ridht: 600px) {
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  .logo {
+    position: absolute;
+    left:0.5rem;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .nombreConsultora{
+    font-size: 0.7rem;
+    text-align:center;
+  }
+  
+  .menuNosotros{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nosotrosUno"
+    "nosotrosDos"
+    "nosotrosTres";
+    grid-row-gap: 5px;
+  }
+
+  .menuBusquedas {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+   }
+  
+   .contacto {
+    font-size: 1.25rem;
+    line-height: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "encabezado"
+    "formulario"
+    "video";
+    grid-row-gap: 10px;
+  }
+
+  .encabezadoContacto {
+    font-family: 'Rubik Glitch', cursiva;
+    font-weight: 300;
+    justify-self: flex-start;
+  }
+  
+  section form {
+    padding: 2px;
+    align-self:flex-start;
+  }
+  
+  .itemForm {
+    margin: 1px;
+  }
+  
+  .inputContacto {
+    padding: 0%;
+  }
+  
+  .casillasForm {
+    margin: 10px;
+  } 
+}
+
+@media screen and (max-width: 600px) {
   
 }
 
-@media screen and (max-ridht: 480px) {
+@media screen and (max-width: 480px) {
    
 }
 
-@media screen and (max-ridht: 320px) {
-    
+@media screen and (max-width: 425px) {
+  header {
+    height: 23%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "logo"
+    "nombreConsultora"
+    "menu";
+  }
+  
+  .logo {
+    grid-area:logo;
+    width: 40px;
+    height: 40px; 
+    justify-self:center;
+    align-self: center;
+  }
+  
+  .nombreConsultora{
+    grid-area: nombreConsultora;
+    font-size:0.5rem;
+  }
+  
+  nav{
+    grid-area: menu;
+  }
+
+  nav ul li{
+    width: 30px;
+    font-size: 0.5rem;
+  }
+  
+  ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor:pointer;
+    padding: 8px 10px;
+    border-radius: 3px;
+  }
+
+  #servicios {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "servicioUno servicioDos"
+    "servicioTres servicioCuatro"
+    "servicioCinco none";
+  } 
+
+  .menuBusquedas {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+   }
+
+   .contacto {
+    font-size: 1rem;
+    padding-top: 100px;
+    grid-row-gap: 1px;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .menuNosotros{
+    font-size: ;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "nosotrosUno"
+    "nosotrosDos"
+    "nosotrosTres";
+    grid-row-gap: 5px;
+  }
+
+  #servicios {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "servicioUno"
+    "servicioDos"
+    "servicioTres"
+    "servicioCuatro"
+    "servicioCinco";
+  } 
+
+  .menuBusquedas {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (8, 1fr);
+   }
+
+   .contacto {
+    font-size: 1rem;
+    padding-top: 100px;
+    grid-row-gap: 1px;
+    flex-wrap: wrap;
+  }
 }
 
 img{
