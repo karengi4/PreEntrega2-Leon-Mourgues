@@ -290,7 +290,8 @@ main h4{
   grid-template-areas: 
   "encabezado encabezado"
   "formulario video";
-  grid-column-gap: 100px;
+  grid-column-gap: 80px;
+  justify-content:flex-start;
 }
 
 .encabezadoContacto {
@@ -305,8 +306,9 @@ section form {
   grid-area: formulario;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content:flex-start; */
   align-content: space-between;
+
   padding: 20px;
   box-shadow:
        inset 0 -3em 3em rgba(243, 88, 49, 0.753),
@@ -536,29 +538,18 @@ section form {
     grid-template-rows: 1fr 1fr 1fr 1fr;
    }
 
-   /* .contacto {
+  .contacto {
     font-size: 1rem;
     padding-top: 100px;
     grid-row-gap: 1px;
-    flex-wrap: wrap;
-    justify-self: start;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  } */
+    grid-template-columns:90vw;
+    justify-content: space-between;
+  }
 
-  /* .contacto {
-    font-size: 1.25rem;
-    line-height: 30px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "encabezado"
-    "formulario"
-    "video";
-    grid-row-gap: 10px;
-  } */
+  .videoContacto {
+    grid-area: video;
+    width: 90vw;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -601,6 +592,7 @@ section form {
     padding-top: 100px;
     grid-row-gap: 1px;
   }
+
 }
 
 img{
