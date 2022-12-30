@@ -27,7 +27,6 @@ body{
 }
 
 header {
-  height: 18%;
   width:100%;
   background: rgb(1, 206, 209);  
   grid-area: header;
@@ -75,19 +74,22 @@ nav ul li{
 }
 
 ul li a{
+  display: block;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform:uppercase;
   cursor:pointer;
-  padding: 8px 10px;
+  padding: 5px 5px;
   border-radius: 3px;
+  text-align: center;
 }
 
-ul li a:hover, 
-a:active{
+ul li a:hover,
+ul li a:active{
   color:whitesmoke;
   background-color: rgb(253, 137, 95);
-  transition: 1s;
+  transition: .5s;
 }
+
 
 /* MAIN */
 
@@ -286,12 +288,11 @@ main h4{
   line-height: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
   grid-template-areas: 
   "encabezado encabezado"
   "formulario video";
   grid-column-gap: 80px;
-  justify-content:flex-start;
 }
 
 .encabezadoContacto {
@@ -306,14 +307,14 @@ section form {
   grid-area: formulario;
   display: flex;
   flex-direction: column;
-  /* justify-content:flex-start; */
   align-content: space-between;
-
   padding: 20px;
   box-shadow:
        inset 0 -3em 3em rgba(243, 88, 49, 0.753),
              0 0  0 2px rgba(167, 19, 180, 0.527),
              0.3em 0.3em 1em rgba(229, 123, 233, 0.952);
+  align-self: center;
+  justify-self: center;
 }
 
 .itemForm {
@@ -348,6 +349,8 @@ section form {
 
 .videoContacto {
   grid-area: video;
+  align-self: center;
+  justify-self: center;
 }
 
 @media screen and (max-width: 1400px) {
@@ -358,6 +361,7 @@ section form {
 
 }
 
+/* MODIFICADO EL PUNTO DE QUIEBRE 1200px */
 @media screen and (max-width: 1024px) {
 
   .logo {
@@ -402,6 +406,7 @@ section form {
   }
 }
 
+/* MODIFICADO EL PUNTO DE QUIEBRE 768px */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
@@ -438,7 +443,7 @@ section form {
     line-height: 30px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
     grid-template-areas: 
     "encabezado"
     "formulario"
@@ -478,9 +483,9 @@ section form {
    
 }
 
+/* MODIFICADO EL PUNTO DE QUIEBRE 425px */
 @media screen and (max-width: 425px) {
   header {
-    height: 23%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 0.5fr;
@@ -488,23 +493,24 @@ section form {
     "logo"
     "nombreConsultora"
     "menu";
-    justify-self:center;
+    align-items: center;
   }
   
   header span{
     width:100%; 
     grid-area:logo;
+    position: ;
   }
   
   .logo a img{
     width:40px;
-    margin-top: 30px;
+    margin-top: 30px; 
     margin-left: 180px;
   }
 
   .nombreConsultora{
     grid-area: nombreConsultora;
-    font-size:0.5rem;
+    font-size:0.6rem;
   }
   
   nav{
@@ -512,16 +518,33 @@ section form {
   }
 
   nav ul li{
-    width: 30px;
-    font-size: 0.5rem;
+    width: 100%;
+    font-size: 0.6rem;
   }
   
   ul li a{
     text-decoration: none;
     text-transform: uppercase;
     cursor:pointer;
-    padding: 8px 10px;
+    padding: 2px;
     border-radius: 3px;
+  }
+
+  .bienvenida{
+    font-size: 0.6rem;
+  }
+
+  .nosotrosTitulo{
+    font-size: 0.8rem;
+    line-height: 1rem;
+    padding-top: 1rem;
+    font-weight: bold;
+  }
+
+  .nosotrosParrafo{
+    font-size: 0.6rem;
+    line-height: 1rem;
+    padding-top: 1rem;
   }
 
   #servicios {
@@ -531,19 +554,22 @@ section form {
     "servicioUno servicioDos"
     "servicioTres servicioCuatro"
     "servicioCinco none";
+    font-size: 0.5rem;
   } 
+
+  #busquedas{
+    font-size: 0.6rem;
+  }
 
   .menuBusquedas {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    font-size: 0.5rem;
    }
 
   .contacto {
-    font-size: 1rem;
-    padding-top: 100px;
-    grid-row-gap: 1px;
+    font-size: 0.6rem;
     grid-template-columns:90vw;
-    justify-content: space-between;
   }
 
   .videoContacto {
@@ -552,23 +578,12 @@ section form {
   }
 }
 
+/* MODIFICADO EL PUNTO DE QUIEBRE 320px */
 @media screen and (max-width: 320px) {
-
   .logo a img{
     width:40px;
     margin-top: 30px;
     margin-left: 130px;
-  }
-
-  .menuNosotros{
-    font-size:0.2rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-    "nosotrosUno"
-    "nosotrosDos"
-    "nosotrosTres";
-    grid-row-gap: 5px;
   }
 
   #servicios {
@@ -586,12 +601,6 @@ section form {
     grid-template-columns: 1fr;
     grid-template-rows: repeat (8, 1fr);
    }
-
-   .contacto {
-    font-size: 1rem;
-    padding-top: 100px;
-    grid-row-gap: 1px;
-  }
 
 }
 
