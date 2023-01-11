@@ -499,7 +499,6 @@ section form {
   header span{
     width:100%; 
     grid-area:logo;
-    position: ;
   }
   
   .logo a img{
